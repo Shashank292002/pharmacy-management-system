@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Shashank's E-commerce Medical Store</a></h1>
+        <h1><a href="cart.html">Cart</a></h1>
+    </header>
+    <h1>Your Shopping Cart</h1>
+<main>
+    <section id="cart-items" class="product">
+        <!-- Cart items will be displayed here dynamically -->
+    </section>
+</main>
+<p class="bro">Delivery charges: <span>0.00</span></p>
+<p class="bro">GST: <span>0.00</span></p>
+    <p class="bro">Total: $<span id="cart-total">0.00</span></p>
+
+    <p class="bro"><button id="checkoutButton" onclick="checkout()">Proceed to payment</button></p>
+
+    <script>
+        // Retrieve the cart from local storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Display cart items and calculate the total
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const checkoutButton = document.getElementById('checkoutButton');
+        
+        let total = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+
+            const itemImage = document.createElement('img');
+            itemImage.src = item.image;
+            itemImage.alt = item.name;
+
+            const itemName = document.createElement('p');
+            itemName.textContent = item.name;
+
+            const itemPrice = document.createElement('p');
+            itemPrice.textContent = `$${item.price}`;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove from Cart';
+            removeButton.onclick = () => removeItem(i);
+
+            cartItem.appendChild(itemImage);
+            cartItem.appendChild(itemName);
+            cartItem.appendChild(itemPrice);
+            cartItem.appendChild(removeButton);
+
+            cartItems.appendChild(cartItem);
+            total += item.price;
+        }
+
+        cartTotal.textContent = total.toFixed(2);
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload(); // Refresh the page to reflect changes
+        }
+
+        function checkout() {
+            // You can implement your payment logic here
+            alert('Payment Successful! Thank you for shopping with us.');
+            // Clear the cart after successful payment
+            localStorage.removeItem('cart');
+            location.reload(); // Refresh the page to reflect changes
+        }
+    </script>
+     <footer>
+        <p>&copy; 2023 Shashank's E-commerce Medical Store</p>
+    </footer>
+</body>
+</html>

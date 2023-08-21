@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Shashank's E-commerce Medical Store</a>
+        </h1>
+        <h1><u>Product Search</u></h1>
+        <input type="text" id="search-input" placeholder="Search for products...">
+        <button id="search-button">Search</button>
+        <h1><a href="cart.html">Cart</a></h1>
+    </header>
+    
+    <main>
+        <section class="product" id="search-results">
+            <img src="pro1.jpg" alt="PARACETAMOL">
+            <h2>PARACETAMOL</h2>
+            <p>It is used for reducing fever.</p>
+            <select name="options" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $50.00</p>
+            <button onclick="addToCart('PARACETAMOL', 50,'pro1.jpg' )">Add to Cart</button>        </section>
+
+        <section class="product">
+            <img src="pro2.jpg" alt="NAPROXEN">
+            <h2>NAPROXEN</h2>
+            <p>pain releasing medicine.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('NAPROXEN', 60, 'pro2.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="nicip plus.jpg" alt="Product 2">
+            <h2>NICIP PLUS</h2>
+            <p>helps in relieving pain,inflamation,mild migrain,rheumatiod arthritis.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $20.00</p>
+            <button onclick="addToCart('NICIP PLUS', 20, 'nicip plus.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="nimesulide.jpg" alt="Product 2">
+            <h2>NIMESULIDE</h2>
+            <p>For pain relief and prevention of fever.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('NIMESULIDE', 60, 'nimesulide.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="cetirizine.jpg" alt="Product 2">
+            <h2>CETIRIZINE</h2>
+            <p>treatment for hay fever.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('CETIRIZINE', 60, 'cetirizine.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="dolo 650.jpg" alt="Product 2">
+            <h2>DOLO 650</h2>
+            <p>fever, nerve pain, toothache,common cold.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('DOLO 650', 60, 'dolo 650.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="azithromycin.jpg" alt="Product 2">
+            <h2>AZITHROMYCIN</h2>
+            <p>pneunomonia, bacterail infection, sexual transmited diseases(stds),bronchitis.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('AZITHROMYCIN', 60, 'azithromycin.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Farxiga.jpg" alt="Product 2">
+            <h2>FARXIGA</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('FARXIGA', 60, 'Farxiga.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Abacavir.jpg" alt="Product 2">
+            <h2>ABACAVIR</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('ABACAVIR', 60, 'Abacavir.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Gilenya.jpg" alt="Product 2">
+            <h2>GILENYA</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('GILENYA', 60, 'Gilenya.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Ibuprofen.jpg" alt="Product 2">
+            <h2>IBUPROFEN</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('IBUPROFEN', 60, 'Ibuprofen.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Jardiance.jpg" alt="Product 2">
+            <h2>JARDIANCE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('JARDIANCE', 60, 'Jardiance.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Melatonin.jpg" alt="Product 2">
+            <h2>MELATONIN</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('MELATONIN', 60, 'Melatonin.jpg')">Add to Cart</button>
+        </section>
+        <section class="product">
+            <img src="Naltrexone.jpg" alt="Product 2">
+            <h2>NALTEREXONE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('NALTEREXONE', 60, 'Naltrexone.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="Narcan.jpg" alt="Product 2">
+            <h2>NARCAN</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('NARCAN', 60, 'Narcan.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="acetaminophen.jpg" alt="Product 2">
+            <h2>ACETAMINOPHEN</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('ACETAMINOPHEN', 60, 'acetaminophen.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="Amitriptyline.jpg" alt="Product 2">
+            <h2>AMITRIPTYLINE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('AMITRIPTYLINE', 60, 'Amitriptyline.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="Amlodipine.jpg" alt="Product 2">
+            <h2>AMLODIPINE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('AMLODIPINE', 60, 'Amlodipine.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="Amoxicillin.jpg" alt="Product 2">
+            <h2>AMOXILLINE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('AMOXILLINE', 60, 'Amoxicillin.jpg')">Add to Cart</button>        </section>
+        <section class="product">
+            <img src="Benzonatate.jpg" alt="Product 2">
+            <h2>BENZONATATE</h2>
+            <p>Description of Product 2.</p>
+            <select name="options" id="">quantity
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <p>Price: $60.00</p>
+            <button onclick="addToCart('BENZONATATE', 60, 'Benzonatate.jpg')">Add to Cart</button>        </section>
+        <a href="cart.html">Go to Cart</a>
+        
+        <!-- Add more product sections here -->
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        function addToCart(productName, price, imageSrc) {
+            // Get the current cart or initialize an empty cart
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the selected product to the cart
+            cart.push({ name: productName, price: price, image: imageSrc });
+
+            // Store the updated cart in local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 Shashank's E-commerce Medical Store</p>
+    </footer>
+</body>
+</html>
